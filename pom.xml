@@ -22,7 +22,7 @@
         <java.version>17</java.version>
         <cucumber.version>7.14.0</cucumber.version>
         <jacoco.version>0.8.11</jacoco.version>
-        <sonar.projectKey>rafaelcantunes_techchallenge-pagamento-service</sonar.projectKey>
+        <sonar.projectKey>RafaelCAntunes_techchallenge-pagamento-service</sonar.projectKey>
         <sonar.organization>rafaelcantunes</sonar.organization>
         <sonar.host.url>https://sonarcloud.io</sonar.host.url>
         <sonar.sources>src/main/java</sonar.sources>
