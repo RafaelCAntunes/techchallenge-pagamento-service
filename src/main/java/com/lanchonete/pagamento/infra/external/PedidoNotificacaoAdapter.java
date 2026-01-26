@@ -21,11 +21,10 @@ public class PedidoNotificacaoAdapter implements PedidoNotificacaoPort {
 
     @Override
     public void notificarPagamento(String pedidoId, PagamentoStatus status) {
-        PagamentoCallbackDTO dto = new PagamentoCallbackDTO(pedidoId, status.name());
 
         webClient.post()
                 .uri("/callback/{id}/pagamento", pedidoId)
-                .bodyValue(dto)
+                .bodyValue(status)
                 .retrieve()
                 .toBodilessEntity()
                 .subscribe();
