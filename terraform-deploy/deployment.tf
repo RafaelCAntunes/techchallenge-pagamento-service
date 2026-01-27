@@ -45,7 +45,7 @@ resource "kubernetes_deployment" "pagamento" {
           # URLs dos outros serviços
           env {
             name  = "PEDIDOS_SERVICE_URL"
-            value = "http://pedidos-service:8080"
+            value = data.terraform_remote_state.pedido.outputs.service_hostname
           }
 
           env {
