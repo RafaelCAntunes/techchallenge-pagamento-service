@@ -21,7 +21,9 @@ terraform {
   }
 }
 
-
+provider "aws" {
+  region = var.aws_region
+}
 
 data "terraform_remote_state" "eks" {
   backend = "remote"
@@ -41,17 +43,6 @@ data "terraform_remote_state" "db" {
     organization = "techchallenge-lanchonete"
     workspaces = {
       name = "techchallenge-infra-db"
-    }
-  }
-}
-
-data "terraform_remote_state" "pedido" {
-  backend = "remote"
-
-  config = {
-    organization = "techchallenge-lanchonete"
-    workspaces = {
-      name = "techchallenge-pedido-service"
     }
   }
 }
