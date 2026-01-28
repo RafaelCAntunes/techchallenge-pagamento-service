@@ -1,11 +1,11 @@
 resource "kubernetes_service" "pagamento" {
   metadata {
-    name = "producao-service"
+    name = "pagamento-service"
   }
 
   spec {
     selector = {
-      app = "producao"
+      app = "pagamento"
     }
 
     port {
